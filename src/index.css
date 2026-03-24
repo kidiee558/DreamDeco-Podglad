@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  
+  /* Nowa kolorystyka: jaśniutkobeżowa, kremowo-beżowa, ciemnoszara */
+  --color-bg-primary: #FAF8F5; /* Jaśniutkobeżowy */
+  --color-bg-secondary: #E6DFD3; /* Kremowo-beżowy */
+  --color-text-main: #2A2A2A; /* Ciemnoszary */
+  --color-text-muted: #5C5A58; /* Jaśniejszy szary do tekstów pobocznych */
+  --color-accent: #2A2A2A; /* Ciemnoszary jako główny akcent */
+  --color-accent-light: #E6DFD3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Custom Utilities for Premium Look */
+.glass-panel {
+  background: rgba(250, 248, 245, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(230, 223, 211, 0.5);
+  box-shadow: 0 20px 40px rgba(42, 42, 42, 0.05);
+}
+
+.image-arch {
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+}
+
+.image-pill {
+  border-radius: 999px;
+}
+
+.image-arch-bottom {
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+}
+
+/* Hide scrollbar for clean look */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
